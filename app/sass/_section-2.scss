@@ -1,0 +1,157 @@
+.section-2 {
+  background-color: color(color-neutral-1);
+  padding: calc(2rem + 2vh) calc(3rem + 2vw);
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  justify-items: center;
+
+  &__content {
+    &--title {
+      margin-bottom: 2rem;
+      @extend .section-1__content--title;
+    }
+
+    &--para {
+      margin-bottom: 2rem;
+    }
+
+    &--link {
+      position: relative;
+      color: color(color-accent-2);
+      display: inline-block;
+      margin-bottom: 5rem;
+      padding: 0.8rem 0;
+
+      img {
+        position: absolute;
+        top: 35%;
+        right: -2rem;
+      }
+    }
+
+    &--link::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: 0;
+      width: 115%;
+      height: 0.15rem;
+      background-color: color(color-accent-2);
+    }
+
+    &--link:hover {
+      color: color(color-accent-2-m);
+    }
+
+    &--link:hover::after {
+      background-color: color(color-accent-2-m);
+    }
+
+    &--link:hover img {
+      filter: saturate(3);
+    }
+
+    &--testimonial {
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px 0px;
+      max-width: 35rem;
+      padding: 4rem;
+      border-radius: 0.5rem;
+
+      &__para {
+        width: 100%;
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+      }
+
+      &__author {
+        display: flex;
+
+        img {
+          width: 3.2rem;
+          height: 3.2rem;
+          border-radius: 50%;
+        }
+
+        &--info {
+          margin-left: 1rem;
+          &__name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.55px;
+          }
+
+          &__status {
+            font-size: 0.8rem;
+            font-weight: 400;
+            letter-spacing: 0.4px;
+          }
+        }
+      }
+    }
+  }
+
+  &__illustration {
+    max-width: 60rem;
+    align-self: center;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @include media-tablet {
+    grid-template-columns: 1fr;
+
+    &__content {
+      text-align: center;
+
+      &--para {
+        margin: 2rem auto;
+        width: 80%;
+      }
+
+      &--testimonial {
+        text-align: start;
+        margin: 0 auto;
+      }
+    }
+
+    &__illustration {
+      order: -1;
+    }
+  }
+
+  @include media-medium {
+    &__content {
+      &--para {
+        font-size: 1.4rem;
+        text-align: start;
+        width: 100%;
+      }
+
+      &--link {
+        font-size: 1.4rem !important;
+      }
+
+      &--testimonial {
+        padding: 3rem;
+
+        &__para {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  @include media-small {
+    &__content {
+      &--para,
+      &--link {
+        font-size: 1.2rem !important;
+      }
+    }
+  }
+}

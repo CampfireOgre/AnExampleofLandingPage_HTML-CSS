@@ -1,0 +1,117 @@
+.section-1 {
+  padding: calc(2rem + 2vh) calc(3rem + 2vw);
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  justify-items: center;
+
+  &__content {
+    align-self: center;
+
+    &--title {
+      margin-bottom: 2rem;
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1.4;
+      font-family: "Raleway", sans-serif;
+      color: color(color-primary-1);
+    }
+
+    &--para {
+      font-size: 1.7rem;
+      width: 90%;
+    }
+
+    &--email {
+      margin-top: 2rem;
+    }
+  }
+
+  &__illustration {
+    max-width: 60rem;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @include media-large {
+    &__content {
+      &--title {
+        font-size: 3rem;
+      }
+
+      &--email {
+        input {
+          width: 24rem;
+        }
+
+        button {
+          width: 15rem;
+        }
+      }
+    }
+  }
+
+  @include media-tablet {
+    grid-template-columns: 1fr;
+    text-align: center;
+
+    &__content {
+      &--para {
+        width: 70%;
+        margin: auto;
+      }
+    }
+
+    &__illustration {
+      order: -1;
+    }
+  }
+
+  @include media-medium {
+    &__content {
+      &--title {
+        font-size: 2.5rem;
+      }
+      &--para {
+        font-size: 1.4rem;
+        width: 100%;
+      }
+
+      &--email {
+        input {
+          width: 20rem;
+        }
+
+        button {
+          width: 12rem;
+        }
+      }
+    }
+  }
+
+  @include media-small {
+    &__content {
+      &--title {
+        font-size: 2rem;
+      }
+
+      &--para {
+        font-size: 1.2rem;
+      }
+
+      &--email {
+        input {
+          margin-bottom: 2rem;
+          width: 100%;
+        }
+
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

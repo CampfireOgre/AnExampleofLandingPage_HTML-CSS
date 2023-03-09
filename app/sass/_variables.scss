@@ -1,0 +1,25 @@
+$colors: (
+  "color-primary-1": hsl(243, 87%, 12%),
+  "color-primary-2": hsl(238, 22%, 44%),
+  "color-accent-1": hsl(224, 93%, 58%),
+  "color-accent-1-m": hsl(221, 100%, 71%),
+  "color-accent-2": hsl(170, 45%, 43%),
+  "color-accent-2-m": hsl(167, 62%, 56%),
+  "color-neutral-1": hsl(240, 80%, 98%),
+  "color-neutral-2": hsl(0, 0%, 75%),
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+$breaking-points: (
+  "break-point-large": 1280px,
+  "break-point-tablet": 975px,
+  "break-point-mid": 600px,
+  "break-point-small": 410px,
+);
+
+@function break-point($breaking-point-limit) {
+  @return map-get($breaking-points, $breaking-point-limit);
+}

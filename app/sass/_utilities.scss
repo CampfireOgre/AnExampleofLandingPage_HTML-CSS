@@ -1,0 +1,59 @@
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f2f2f2;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.05rem;
+  color: color(color-primary-1);
+}
+
+input {
+  width: 35rem;
+  padding: 1.4rem 2rem;
+  margin-right: 1.5rem;
+  border: 0.5px solid black;
+  border-radius: 0.4rem;
+  letter-spacing: 0.1rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+
+input::placeholder {
+  color: color(color-neutral-2);
+}
+
+button {
+  width: 18rem;
+  padding: 1.4rem 2rem;
+  border-radius: 0.4rem;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.4rem;
+  font-family: "Raleway", sans-serif;
+  cursor: pointer;
+  background-color: color(color-accent-1);
+}
+
+button:hover {
+  background-color: color(color-accent-1-m);
+}

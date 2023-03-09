@@ -1,0 +1,87 @@
+// ***** for 1280px ***** //
+@mixin media-large {
+  @media screen and (max-width: break-point(break-point-large)) {
+    @content;
+  }
+}
+
+// *****  for 950px ***** //
+@mixin media-tablet {
+  @media screen and (max-width: break-point(break-point-tablet)) {
+    @content;
+  }
+}
+
+// *****  for 600px ***** //
+@mixin media-medium {
+  @media screen and (max-width: break-point(break-point-mid)) {
+    @content;
+  }
+}
+// *****  for 450px ***** //
+@mixin media-small {
+  @media screen and (max-width: break-point(break-point-small)) {
+    @content;
+  }
+}
+
+@import "variables";
+@import "reset";
+@import "utilities";
+@import "header";
+@import "section-1";
+@import "section-2";
+@import "section-3";
+@import "footer";
+
+.bg-curve {
+  width: 100%;
+  height: calc(9rem + 2vw);
+  background-image: url(../images/bg-curve-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include media-medium {
+    background-image: url(../images/bg-curve-mobile.svg);
+  }
+}
+
+.scroll {
+  position: fixed;
+  padding: 2rem;
+  bottom: 70rem;
+  right: 4rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+
+  background-color: #bbb8fa;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+.scroll::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  background-image: url("../images/scroll.svg");
+  filter: brightness(0) invert(1);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.scroll.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 4rem;
+}

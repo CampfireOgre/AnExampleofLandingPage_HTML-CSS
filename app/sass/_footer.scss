@@ -1,0 +1,154 @@
+.footer {
+  background-color: color(color-primary-1);
+  padding: 6rem;
+
+  img[class="footer__logo"] {
+    display: block;
+    margin-bottom: 1rem;
+    width: 13.5rem;
+    height: 4rem;
+    filter: brightness(0) invert(1);
+  }
+
+  &__grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+
+  &__contact {
+    justify-self: start;
+
+    p {
+      color: white;
+    }
+
+    p:nth-of-type(1) {
+      margin-bottom: 1rem;
+    }
+
+    img {
+      margin-right: 1.2rem;
+    }
+  }
+
+  &__links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem 14rem;
+
+    &--column-1,
+    &--column-2 {
+      display: grid;
+      row-gap: 1.5rem;
+    }
+
+    &--column-2 {
+      place-self: baseline;
+    }
+
+    &--item {
+      a {
+        color: white;
+      }
+    }
+
+    &--item:hover {
+      a {
+        color: color(color-accent-1-m);
+      }
+    }
+  }
+
+  &__socials {
+    &--item {
+      margin-right: 1.2rem;
+
+      i {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        border-radius: 50%;
+        border: 1px solid white;
+        width: 2rem;
+        height: 2rem;
+        padding: 1.5rem;
+      }
+    }
+
+    &--item:nth-of-type(3) {
+      margin-right: 0;
+    }
+
+    &--item:hover {
+      i {
+        color: color(color-accent-1-m);
+        border: 1px solid color(color-accent-1-m);
+      }
+    }
+  }
+
+  @include media-large {
+    &__contact {
+      p {
+        font-size: 1.4rem;
+      }
+    }
+
+    &__links {
+      gap: 4rem 10rem;
+
+      &--item a {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  @include media-tablet {
+    padding: 2rem;
+
+    &__grid-container {
+      grid-template-columns: 1fr;
+      row-gap: 4rem;
+    }
+
+    img[class="footer__logo"] {
+      margin: 0 auto 4rem;
+    }
+
+    &__contact {
+      justify-self: center;
+    }
+
+    &__links {
+      column-gap: 6rem;
+    }
+  }
+
+  @include media-small {
+    &__grid-container {
+      justify-items: start;
+    }
+
+    &__contact {
+      justify-self: initial;
+
+      img {
+        width: 1.5rem;
+      }
+    }
+
+    &__links {
+      grid-template-columns: 1fr;
+    }
+
+    &__socials {
+      justify-self: center;
+    }
+
+    img[class="footer__logo"] {
+      margin: 2rem 0;
+    }
+  }
+}
