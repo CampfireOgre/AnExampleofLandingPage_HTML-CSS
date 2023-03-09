@@ -121,6 +121,7 @@ button:hover {
 
 .section-1 {
   padding: calc(2rem + 2vh) calc(3rem + 2vw);
+  height: 75rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
@@ -145,7 +146,7 @@ button:hover {
   margin-top: 2rem;
 }
 .section-1__illustration {
-  max-width: 60rem;
+  max-width: 70rem;
 }
 .section-1__illustration img {
   width: 100%;
@@ -388,7 +389,7 @@ button:hover {
 
 .footer {
   background-color: hsl(243, 87%, 12%);
-  padding: 6rem;
+  padding: 10rem 8rem;
 }
 .footer img[class=footer__logo] {
   display: block;

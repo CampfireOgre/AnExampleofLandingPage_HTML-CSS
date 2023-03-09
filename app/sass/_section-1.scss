@@ -1,5 +1,6 @@
 .section-1 {
   padding: calc(2rem + 2vh) calc(3rem + 2vw);
+  height: 75rem;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -29,7 +30,7 @@
   }
 
   &__illustration {
-    max-width: 60rem;
+    max-width: 70rem;
 
     img {
       width: 100%;
